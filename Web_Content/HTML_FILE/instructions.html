@@ -1,54 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Instruction</title>
+    <title>Instructions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="../CSS_FILE/login.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../CSS_FILE/IMlogin.css" />
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
-<body> 
-	<header>EINSTEIN'S PUZZLE</header>
+<body>
+    <header>EINSTEIN'S PUZZLE</header>
     <div class="gamelogo"></div>
+    <div class="cinstruc">
+        <ol>
+            <li>Read the clues</li><br>
+            <li>Find all the "basic" clues and mark them. The most basic clue is the one that
+                states that something is in a determined house/position. Example:
+                <ul>
+                    <br>
+                    <li>The German lives in house #3.</li>
+                </ul><br>
+            <li>Sometimes you are going to need to deduce some information using two or more
+                clues.</li><br>
+            <li><b> To submit your puzzle, catch the moving picture by clicking on it.</b></li><br>
+            <li><b> You will have 30 seconds to work through all the puzzles. Puzzles will
+                vary in difficulty.</b></li>
+        </ol>
 
-<header>HOW TO PLAY</header>
+        <button class="mbtn"><a href="menu.html">Back to Menu</a></button>
+    </div>
 
-<div class="instructions">
-<button class="ibutton"><a href="./menu.html">Back</a></button>
-	<ol>
-	<li>Read the clues</li><br>
-	<li>Find all the "basic" clues and mark them. The most basic clue is the one that 
-	states that something is in a determined house/position. Example:
-	<ul>
-	<br>
-	<li>The German lives in house #3.</li>
-	</ul><br>
-	<li>Sometimes you are going to need to deduce some information using two or more
-	clues.</li><br>
-	<li><b> To submit your puzzle, catch the moving picture by clicking on it.</b></li><br>
-	<li><b> You will have 3 attempts to work through all the puzzles. Puzzles will 
-	vary in difficulty.</b></li>
-	
-	</ol>
-</div>
-<div style="height:20%;"><header>GOOD LUCK</header></div>
+    <div class="footer">
+        <span>Powered By: InfiniteLoop</span>
+        <ul id="icon-list">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+    </div>
 
-<h1> </h1>
-<h1> </h1>
-<h1> </h1>
-<h1> </h1>
-<h1> </h1>
-<h1> </h1>
-<div class="footer">
-        <span>Powered By: </span>
-            <ul id="icon-list">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-            </ul>
-        </div> 
+<iframe src="../music/kyoto.mp3" allow="autoplay" id="audio"></iframe>
+<audio id="player" autoplay hidden><source src="0.mp3" type="audio/mp3"></audio>
 </body>
 </html>

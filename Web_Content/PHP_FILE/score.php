@@ -16,7 +16,7 @@
 <div class ="button_contains"><a href="../HTML_FILE/menu.html"><button class="ibutton">Menu</button></a></div>
 <?php
 session_start();
-if(isset($_SESSION['score']) && $_SESSION['score']==1) {
+if(isset($_SESSION['score']) && $_SESSION['score']>=1) {
 	echo "<img src=\"../image/yougood.jpg\" class=\"scoreContains\">";
 	echo "<audio src=\"../image/right.mp3\" autoplay>
 	<p>If you are reading this, it is because your browser does not support the audio element.</p>

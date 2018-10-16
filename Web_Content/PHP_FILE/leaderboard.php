@@ -52,7 +52,7 @@ foreach ($list as $key => $value){
 		break;
 	}
 		
-	echo "<tr><td>".$i."</td><td>".$key."</td><td>".$value."</td></tr>";
+	echo "<tr><td>".($i+1)."</td><td>".$key."</td><td>".$value."</td></tr>";
 	$i++;
 }
 ?>

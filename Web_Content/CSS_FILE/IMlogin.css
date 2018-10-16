@@ -13,16 +13,7 @@ header {
     text-align: center;
     letter-spacing: 7px;
 }
-.menu{
-	margin-left:auto;
-	margin-right:auto;
-	width:40%;
-	text-align:center;
-	padding: 10px;
-	border: 1px solid #b3aca7;
-    position:relative;
-	
-}
+
 .gamelogo {
     margin: 0 auto;
     background-image: url("../image/e1.jpg");
@@ -33,13 +24,23 @@ header {
 
 form {
     margin: 20px auto;
-    width: 40%;
-    height: 60%;
+    width: 400px;
+    height: 10%;
     background-color: #e2dedb;
     padding: 30px;
     position:relative;
     border: 1px solid #b3aca7;
     
+}
+
+.signup {
+    margin: 20px auto;
+    width: 400px;
+    height: 10%;
+    background-color: #e2dedb;
+    padding: 30px;
+    position:relative;
+    border: 1px solid #b3aca7;
 }
 
 input[type=text], input[type=password]{
@@ -73,6 +74,16 @@ input:focus {
     border: none;
     cursor: pointer;
     width: 100%;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+#loginBtn:hover {
+    background: #b3aca7;
+    color: #e2dedb;
 }
 
 .createacc {
@@ -91,6 +102,7 @@ input:focus {
 .cancelbtn, .signupbtn {
     float: left;
     width: 50%;
+    margin-top: 10px;
 }
 
 .clearfix::after {
@@ -100,15 +112,35 @@ input:focus {
 }
 
 .cancelbtn {
+    letter-spacing: 2px;
     padding: 14px 20px;
     background-color: #817c78;
     color: white;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
 }
 
 .signupbtn {
+    letter-spacing: 2px;
     padding: 14px 20px;
     background-color: #817c78;
     color: white;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+.signupbtn:hover {
+    background: #b3aca7;
+    color: #e2dedb;
+}
+
+.cancelbtn:hover {
+    background: #b3aca7;
+    color: #e2dedb;
 }
 
 .cancelbtn a, .signupbtn, a {
@@ -148,69 +180,98 @@ input:focus {
     transition: .5s ease-in;
 }
 
-.instructions{
-	margin-left:auto;
-	margin-right:auto;
-	width:60%;
-	height:80%;
-	background:white;
-	font-size:20px;
-}
-.button {
-    background-color: #5f5b58; /* Green */
-    width:40%;
+iframe {
+    width: 0;
+    height: 0;
+    border: 0;
     border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-left:auto;
-	margin-right:auto;
-    cursor: pointer;
-    margin-up:5px;
 }
-.ibutton{
-    background-color: #5f5b58; /* Green */
-    width:100%;
-    border: none;
+
+.container {
+    margin: 20px auto;
+    width: 300px;
+    height: auto;
+    background-color: #e2dedb;
+    padding: 30px;
+    position:relative;
+    border: 1px solid #b3aca7;
+}
+
+.mbtn {
+    background-color: #817c78;
     color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-left:auto;
-	margin-right:auto;
+    letter-spacing: 2px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
     cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+.mbtn:hover {
+    background: #b3aca7;
+    color: #e2dedb;
+}
+
+.cinstruc {
+    margin: 20px auto;
+    width: 400px;
+    height: auto;
+    background-color: #e2dedb;
+    padding: 30px;
+    position:relative;
+    border: 1px solid #b3aca7;
 }
 
 .leaderContainer{
-	width:60%;
-	color:white;
-	margin-left:auto;
-	margin-right:auto;
+    width:50%;
+    color:white;
+    margin-left:auto;
+    margin-right:auto;
 }
 .leaderTable{
-	width:100%;
-	font-size:25px;
-	background-color: #5f5b58;	
+    width:100%;
+    font-size:25px;
+    background-color: #5f5b58;
+    font-size: 20px;
 }
+
+#player {
+    width: 40%;
+}
+
+#completed {
+    width: 40%;
+}
+
+table td {
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+table td:hover {
+    background: #b3aca7;
+    color: #e2dedb;
+}
+
 th{
-	background-color: #4CAF50;
-	height:50px;
-	color:white;
+    background-color: #817c78;
+    height:50px;
+    color:white;
 }
 td{
     text-align: left;
     height:50px;
 }
 
-tr:nth-child(odd) {
-	background-color: #f2f2f2;
-	color:black;
-}
+
 h1{
-	text-align:center;
+    text-align:center;
 }

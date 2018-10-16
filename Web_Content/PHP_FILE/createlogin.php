@@ -28,7 +28,6 @@ if(isset($_POST["submit"])){
             $error .= "<p><label class=\"text-danger\">Only letter and white space allowed</label></p>";
         }
     }
-
     if(empty($_POST["password"])){
         $error .= '<p><label class="text-danger">Please enter your password</label></p>';
     } elseif($_POST["password"] != $_POST["confirmpassword"]) {
@@ -48,25 +47,27 @@ if(isset($_POST["submit"])){
 
     //If error value is blank, write to csv file
     if ($error == ''){
-        $file_open = fopen("credentials.csv", "a+"); //File pointer will be go to end of file because we used a mode for the 2nd argument
+        $file_open = fopen("./credentials.csv", "a+"); //File pointer will be go to end of file because we used a mode for the 2nd argument
         //File function return array of CSV file, count func. will count number of rows in that array
-        $no_rows = count(file('credentials.csv'));
+        $no_rows = count(file("./credentials.csv", "a+"));
         //Generate serial numbers
         if($no_rows > 1){
             $no_rows = $no_rows + 1;
         }
+        echo "<p>".$no_rows."</p>";
         $form_data = array(
             'sr_no' => $no_rows,
             'username' => $name,
             'password' => $password,
         	'score' => $score
         );        
-        fputcsv($file_open, $form_data,"	");
+        fputcsv($file_open, $form_data,",");
         $error = '<p><label class="text-danger">You have been registered! Click <a href="login.php">here</a> to login.</label></p>';
 
         //Clear value
         $name = '';
         $password = '';
+        fclose($file_open);
     }
 }
 ?>

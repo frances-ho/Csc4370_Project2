@@ -1,5 +1,4 @@
-<?php 
-session_destroy();
+<?php
 session_start();
 ?>
 <!DOCTYPE html>
@@ -26,9 +25,10 @@ $questions = array("The Spanish lives directly to the down of the Red house. ;Th
 
 $ans_num = 0;
 
-if(!isset($_SESSION['life'])||$_SESSION['life']<=0){
-	$_SESSION['life'] = 3;
+if(!isset($_COOKIE['time'])){
+	setcookie('time', time(), time()+30, "/");
 }
+
 if(!isset($_SESSION['score'])){
 	$_SESSION['score']=0;
 }
@@ -95,14 +95,12 @@ function check(&$answers, &$guess){
 	return $result;
 }
 
-$index=0;
-if(isset($_SESSION['questionIndex'])){
-	$index = $_SESSION['questionIndex'];
-	if($index>3)
-		$index= 0;
+if(!isset($_SESSION['questionIndex'])){
+	$_SESSION['questionIndex'] = rand(0,1);		
 }
-else{
-	$index = 0;
+$index= $_SESSION['questionIndex'];
+if($index==1){
+	$index++;
 }
 $questions1 = $questions[$index];
 $questions2 = $questions[$index+1];
@@ -113,7 +111,6 @@ $guess = array();
 
 if($_SERVER["REQUEST_METHOD"]=="POST"){
 	//echo "<h1>Life: ".$_SESSION['life']."</h1>";
-	
 	for($i = 0; $i< $GLOBALS['ans_num'];$i++){
 		$name = "select".$i;
 		$selected_val = $_POST[$name];
@@ -121,29 +118,27 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 	}
 	$result= check($answers, $guess);
 	if($result){
-		echo "<img src=\"../image/youwin.gif\" class=\"yon\">";
-		$_SESSION['questionIndex'] = $index+2;
-		$_SESSION['score'] = $_SESSION['score']+1;
+		$index+=2;
+		$score=$_SESSION['score']+1;
+		$_SESSION['questionIndex'] = $index;
+		$_SESSION['score'] = $score;
+		echo "<img src=\"../image/youwin.gif\" class=\"yon\">";		
 	}
 	else{
 		echo "<img src=\"../image/notyet.gif\" class=\"yon\">";
-		
-		echo "<p>".$_SESSION['life']."</p>";
-		$_SESSION['life'] = $_SESSION['life']-1;
-		$_SESSION['questionIndex'] = $index;
-		$_SESSION['score'] = 0;
 	} 
-	if($_SESSION['life'] <= 0){
+	if(!isset($_COOKIE['time'])){
 		header('Location: ../PHP_FILE/score.php');
 		exit;
 	}
 }
 ?>
+<h1>   </h1>
+<h1>   </h1>
+<h1>   </h1>
+<h1>   </h1>
 </div>
-<h1>   </h1>
-<h1>   </h1>
-<h1>   </h1>
-<h1>   </h1>
+
 <audio src="../music/background.mp3" autoplay loop>
 <embed src="../music/background.mp3" width="180" height="90" hidden="true">
 </audio>

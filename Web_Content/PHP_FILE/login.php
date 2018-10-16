@@ -12,7 +12,6 @@ function clean_text($string){
     $string = htmlspecialchars($string); //Convert special chars into HTML entities
     return $string;
 }
-
 if(isset($_POST["submit"])){
     $name = $_POST["name"];
     $password = $_POST["password"];
@@ -20,25 +19,20 @@ if(isset($_POST["submit"])){
 	
     $csv[] = '';
     foreach($file as $k){
-    	echo "<p>".$file."</p>";
         $csv[] = explode(',',$k);
     }
     $count = count($file);
-
     $found = false;
     for($i = 1; $i <= $count;$i++){
         for($j = 1; $j <= 1;$j++){
             $y = clean_text($csv[$i][$j]);
             $x = clean_text($csv[$i][$j+1]);
-    		echo "<p>".$y."</p>";
-    		echo "<p>".$x."</p>";
             if ($y == $name && $x == $password){
                 $found = true;
             }
             break;
         }
     }
-
     if($found){
         header('Location: ../HTML_FILE/menu.html');
     }
