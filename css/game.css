@@ -1,0 +1,146 @@
+@CHARSET "ISO-8859-1";
+
+html,body {
+    height: 100%;
+    margin: 0;
+    background-color: #e2dedb;
+    color: #817c78;
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    position: relative;
+    margin: 20px 0 25px 0;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 7px;
+}
+
+.gamelogo {
+    margin: 0 auto;
+    background-image: url("../images/e1.jpg");
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+}
+
+.tableContains {
+    margin: 20px auto;
+    width:80%;
+    height: 40%;
+    background-color: #e2dedb;
+    padding: 30px;
+    position:relative;
+    border: 1px solid #b3aca7;
+}
+
+.footer {
+    /** position must be FIXED for footer to go to bottom of page **/
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #5f5b58;
+    height: 45px;
+    text-align: center;
+}
+
+ #icon-list {
+    margin: 0 auto;
+    display: inline-flex;
+}
+
+#icon-list li {
+    margin-top: 10px;
+    list-style: none;
+}
+
+#icon-list li a {
+    display: inline-block;
+    width: 28px;
+    height: 30px;
+    background: #5f5b58;
+    font-size: 20px;
+    border-radius: 50%;
+    margin: 0px 5px;
+    color: white;
+    transition: .5s ease-in;
+}
+h1{
+	text-align:center;
+	font-size:30px;
+}
+h3{
+	text-align:center;
+}
+.questionContains{
+	margin-left:auto;
+	margin-right:auto;
+	width:60%;
+	font-size:20px;
+}
+
+.answerContains{
+	margin-left:auto;
+	margin-right:auto;
+	width:80%;
+	text-align:center;
+	height:50%;
+	font-size:20px;
+}
+.scoreContains{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    height:80%;
+}
+
+.yot{
+	display: block;
+	margin-left:auto;
+	margin-right:auto;
+	width: 40%;
+}
+
+.button_contains{
+	margin-left:auto;
+	margin-right:auto;
+	width:40%;
+	color: white;
+    margin-top: 10px;
+}
+
+.mbtn {
+    background-color: #817c78;
+    color: white;
+    letter-spacing: 2px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+.mbtn:hover {
+    background: #b3aca7;
+    color: #e2dedb;
+}
+
+.ibutton{
+    background-color: #5f5b58; /* Green */
+    border: none;
+    width:100%;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+    cursor: pointer;
+}
+

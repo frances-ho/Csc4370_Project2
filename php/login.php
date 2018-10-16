@@ -1,5 +1,7 @@
 <?php
 
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
 
 $error = '';
 $name = '';
@@ -38,7 +40,7 @@ if(isset($_POST["submit"])){
     }
 
     if($found){
-        header('Location: ../html/menu.html');
+        header('Location: menu.html');
     }
 
     if(!$found) {
@@ -94,7 +96,7 @@ if(isset($_POST["submit"])){
             </ul>
     </div>
 
-    <iframe src="../music/raindrop.mp3" allow="autoplay" id="audio"></iframe>
+    <iframe src="../music/kyoto.mp3" allow="autoplay" id="audio"></iframe>
     <audio id="player" autoplay hidden><source src="0.mp3" type="audio/mp3"></audio>
 </body>
 </html>

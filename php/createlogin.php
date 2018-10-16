@@ -1,5 +1,9 @@
 <?php
 
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+
+
 // Store error message while processing form data
 $error = '';
 
@@ -47,7 +51,7 @@ if(isset($_POST["submit"])){
 
     //If error value is blank, write to csv file
     if ($error == ''){
-        $file_open = fopen("credentials.csv", "a"); //File pointer will be go to end of file because we used a mode for the 2nd argument
+        $file_open = fopen("credentials.csv", "a+"); //File pointer will be go to end of file because we used a mode for the 2nd argument
         //File function return array of CSV file, count func. will count number of rows in that array
         $no_rows = count(file('credentials.csv'));
         //Generate serial numbers
@@ -57,7 +61,8 @@ if(isset($_POST["submit"])){
         $form_data = array(
             'sr_no' => $no_rows,
             'username' => $name,
-            'password' => $password
+            'password' => $password,
+            'score' => $score
         );
         fputcsv($file_open, $form_data);
         $error = '<p><label class="text-danger">You have been registered! Click <a href="login.php">here</a> to login.</label></p>';
@@ -119,7 +124,7 @@ if(isset($_POST["submit"])){
             </ul>
     </div>
 
-    <iframe src="../music/raindrop.mp3" allow="autoplay" id="audio"></iframe>
+    <iframe src="../music/kyoto.mp3" allow="autoplay" id="audio"></iframe>
     <audio id="player" autoplay hidden><source src="0.mp3" type="audio/mp3"></audio>
 
 

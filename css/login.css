@@ -190,7 +190,7 @@ iframe {
 .container {
     margin: 20px auto;
     width: 300px;
-    height: 20%;
+    height: auto;
     background-color: #e2dedb;
     padding: 30px;
     position:relative;
@@ -220,9 +220,58 @@ iframe {
 .cinstruc {
     margin: 20px auto;
     width: 400px;
-    height: 45%;
+    height: auto;
     background-color: #e2dedb;
     padding: 30px;
     position:relative;
     border: 1px solid #b3aca7;
+}
+
+.leaderContainer{
+    width:50%;
+    color:white;
+    margin-left:auto;
+    margin-right:auto;
+}
+.leaderTable{
+    width:100%;
+    font-size:25px;
+    background-color: #5f5b58;
+    font-size: 20px;
+}
+
+#player {
+    width: 40%;
+}
+
+#completed {
+    width: 40%;
+}
+
+table td {
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+table td:hover {
+    background: #b3aca7;
+    color: #e2dedb;
+}
+
+th{
+    background-color: #817c78;
+    height:50px;
+    color:white;
+}
+td{
+    text-align: left;
+    height:50px;
+}
+
+
+h1{
+    text-align:center;
 }
