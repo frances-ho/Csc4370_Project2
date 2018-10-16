@@ -1,0 +1,213 @@
+html,body {
+    height: 100%;
+    margin: 0;
+    background-color: #e2dedb;
+    color: #817c78;
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    position: relative;
+    margin: 20px 0 25px 0;
+    font-size: 2.3em;
+    text-align: center;
+    letter-spacing: 7px;
+}
+.menu{
+	margin-left:auto;
+	margin-right:auto;
+	width:80%;
+	text-align:center;
+	
+}
+.gamelogo {
+    margin: 0 auto;
+    background-image: url("../image/e1.jpg");
+    background-size: cover;
+    width: 170px;
+    height: 170px;
+}
+
+form {
+    margin: 20px auto;
+    width: 40%;
+    height: 50%;
+    background-color: #e2dedb;
+    padding: 30px;
+    position:relative;
+    border: 1px solid #b3aca7;
+    
+}
+
+input[type=text], input[type=password]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: solid 1px #b3aca7;
+    box-sizing: border-box;
+    background-color: #e2dedb;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+input:hover {
+    background: #b3aca7;
+    color: #e2dedb;
+}
+
+input:focus {
+    outline: none;
+}
+
+#loginBtn {
+    background-color: #817c78;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.createacc {
+    display: table;
+    margin: 0 auto;
+}
+
+.createacc a {
+    color: #5f5b58;
+}
+
+#signupp{
+    text-align: center;
+}
+
+.cancelbtn, .signupbtn {
+    float: left;
+    width: 50%;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #817c78;
+    color: white;
+}
+
+.signupbtn {
+    padding: 14px 20px;
+    background-color: #817c78;
+    color: white;
+}
+
+.cancelbtn a, .signupbtn, a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer {
+    /** position must be FIXED for footer to go to bottom of page **/
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #5f5b58;
+    height: 45px;
+    text-align: center;
+}
+
+ #icon-list {
+    margin: 0 auto;
+    display: inline-flex;
+}
+
+#icon-list li {
+    margin-top: 10px;
+    list-style: none;
+}
+
+#icon-list li a {
+    display: inline-block;
+    width: 28px;
+    height: 30px;
+    background: #5f5b58;
+    font-size: 20px;
+    border-radius: 50%;
+    margin: 0px 5px;
+    color: white;
+    transition: .5s ease-in;
+}
+
+.instructions{
+	margin-left:auto;
+	margin-right:auto;
+	width:60%;
+	height:80%;
+	background:white;
+	font-size:20px;
+}
+.button {
+    background-color: #5f5b58; /* Green */
+    width:20%;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left:auto;
+	margin-right:auto;
+    cursor: pointer;
+    margin-up:5px;
+}
+.ibutton{
+    background-color: #5f5b58; /* Green */
+    width:100%;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left:auto;
+	margin-right:auto;
+    cursor: pointer;
+}
+
+.leaderContainer{
+	width:60%;
+	color:white;
+	margin-left:auto;
+	margin-right:auto;
+}
+.leaderTable{
+	width:100%;
+	font-size:25px;
+	background-color: #5f5b58;	
+}
+th{
+	background-color: #4CAF50;
+	height:50px;
+	color:white;
+}
+td{
+    text-align: left;
+    height:50px;
+}
+
+tr:nth-child(odd) {
+	background-color: #f2f2f2;
+	color:black;
+}
+h1{
+	text-align:center;
+}
