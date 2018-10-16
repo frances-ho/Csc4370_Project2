@@ -18,6 +18,9 @@ header {
 	margin-right:auto;
 	width:80%;
 	text-align:center;
+	padding: 30px;
+	border: 1px solid #b3aca7;
+    position:relative;
 	
 }
 .gamelogo {

@@ -19,7 +19,7 @@ session_start();
 </audio>
 <div class="gamelogo"></div>
 <?php 
-$questions = array("The Spanish lives directly to the right of the Red house. ;The Norwegian lives in the Blue house.; The Italian lives in house two",
+$questions = array("The Spanish lives directly to the down of the Red house. ;The Norwegian lives in the Blue house.; The Italian lives in house two",
  					"Color,National;blue,red,white!Italian,Norwegian,Spanish;House#1:blue,Norwegian!House#2:red,Italian!House#3:white,Spanish",
 "The Brazilian does not live in house two.; The person with the Dogs plays Basketball.;There is one house between the house of the person who plays Football and the Red house on the right.; The person with the Fishes lives directly to the left of the person with the Cats.;The person with the Dogs lives directly to the right of the Green house.; The German lives in house three.",
 "Color, Nationality,Animal,Sport;blue, green, red!Australian, Brazilian, German!cats, dogs, fishes! basketball, football,soccer;House#1:blue,Brazilian,fishes, football! House#2:green,Australian,cats, soccer!House#3:red,German,dogs,basketball");

@@ -16,8 +16,6 @@ function clean_text($string){
 if(isset($_POST["submit"])){
     $name = $_POST["name"];
     $password = $_POST["password"];
-    echo "<p>".$name."</p>";
-    echo "<p>".$password."</p>";
     $file = file('./credentials.csv');
 	
     $csv[] = '';
@@ -97,7 +95,7 @@ if(isset($_POST["submit"])){
             </ul>
     </div>
 
-    <iframe src="../music/raindrop.mp3" allow="autoplay" id="audio"></iframe>
-    <audio id="player" autoplay hidden><source src="0.mp3" type="audio/mp3"></audio>
+    <iframe src="../music/raindrop.mp3" allow="autoplay" id="audio" style="width:0;height:0;border:0; border:none;"></iframe>
+    <audio id="player" autoplay loop><source src="0.mp3" type="audio/mp3"></audio>
 </body>
 </html>

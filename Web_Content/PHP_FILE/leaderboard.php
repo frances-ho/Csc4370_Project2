@@ -48,6 +48,10 @@ arsort($list);
 $i = 0;
 echo "<tr><th>#</th><th>Score</th><th>Name</th></tr>";
 foreach ($list as $key => $value){
+	if($i==3){
+		break;
+	}
+		
 	echo "<tr><td>".$i."</td><td>".$key."</td><td>".$value."</td></tr>";
 	$i++;
 }

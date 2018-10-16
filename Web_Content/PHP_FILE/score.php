@@ -33,10 +33,10 @@ else{
 
 ?>
 
-<h1>   </h1>
-<h1>   </h1>
-<h1>   </h1>
-<h1>   </h1>
+<h1>.   </h1>
+<h1>.   </h1>
+<h1>.   </h1>
+<h1>.  </h1>
 
 <div class="footer"><span>Powered By: Inifite Loop </span>
 <ul id="icon-list">

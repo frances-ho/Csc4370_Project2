@@ -60,9 +60,7 @@ if(isset($_POST["submit"])){
             'username' => $name,
             'password' => $password,
         	'score' => $score
-        );
-        var_dump($form_data);
-        
+        );        
         fputcsv($file_open, $form_data,"	");
         $error = '<p><label class="text-danger">You have been registered! Click <a href="login.php">here</a> to login.</label></p>';
 
