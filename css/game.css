@@ -144,3 +144,23 @@ h3{
     cursor: pointer;
 }
 
+.nextpuz {
+    background-color: #817c78;
+    color: white;
+    letter-spacing: 2px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+.nextpuz {
+    background: #b3aca7;
+    color: #e2dedb;
+}
+

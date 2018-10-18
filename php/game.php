@@ -21,7 +21,7 @@ session_start();
 <?php
 $questions = array("The Spanish lives directly below the red house. ;The Norwegian lives in the blue house.; The Italian lives in house #2.",
     "Color,National;blue,red,white!Italian,Norwegian,Spanish;House#1:blue,Norwegian!House#2:red,Italian!House#3:white,Spanish",
-    "The Brazilian does not live in house two.; The person with the Dogs plays Basketball.;There is one house between the house of the person who plays Football and the Red house on the right.; The person with the Fishes lives directly to the left of the person with the Cats.;The person with the Dogs lives directly to the right of the Green house.; The German lives in house three.",
+    "The Brazilian does not live in house two.; The person with the Dogs plays Basketball.;There is one house between the house of the person who plays Football and the Red house.; The person with the Fishes lives directly above the person with the Cats.;The person with the Dogs lives directly under the Green house.; The German lives in house three.",
     "Color, Nationality,Animal,Sport;blue, green, red!Australian, Brazilian, German!cats, dogs, fishes! basketball, football,soccer;House#1:blue,Brazilian,fishes, football! House#2:green,Australian,cats, soccer!House#3:red,German,dogs,basketball");
 
 $ans_num = 0;
@@ -119,23 +119,29 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         $selected_val = $_POST[$name];
         array_push($guess, $selected_val);
     }
-    $result= check($answers, $guess);
-    if($result){
-        echo "<img src=\"../images/youwin.gif\" class=\"yon\">";
-        $_SESSION['questionIndex'] = $index+2;
-        $_SESSION['score'] = $_SESSION['score']+1;
-    }
-    else{
-        echo "<img src=\"../images/notyet.gif\" class=\"yon\">";
+    if($guess!=null) {
+        $result = check($answers, $guess);
+        if ($result) {
+            echo "<img src=\"../images/youwin.gif\" class=\"yon\">";
+            echo "<br>";
+            echo "<a href=\"./game.php\" ><button type='submit' class='nextpuz'>Next Puzzle</button></a>";
+            $_SESSION['questionIndex'] = $index + 2;
+            $_SESSION['score'] = $_SESSION['score'] + 1;
+            $_SESSION['life'] = 4;
 
-        echo "<p>".$_SESSION['life']."</p>";
-        $_SESSION['life'] = $_SESSION['life']-1;
-        $_SESSION['questionIndex'] = $index;
-        $_SESSION['score'] = 0;
-    }
-    if($_SESSION['life'] <= 0){
-        header('Location: ../php/score.php');
-        exit;
+
+        } else {
+            if($index!=0) {
+                echo "<img src=\"../images/notyet.gif\" class=\"yon\">";
+            }
+            //echo "<p>".$_SESSION['life']."</p>";
+            $_SESSION['life'] = $_SESSION['life'] - 1;
+            $_SESSION['questionIndex'] = $index;
+        }
+        if ($_SESSION['life'] <= 0) {
+            header('Location: ../php/score.php');
+            exit;
+        }
     }
 }
 ?>

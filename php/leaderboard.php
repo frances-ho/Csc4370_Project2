@@ -47,10 +47,10 @@
 
 
         arsort($list);
-        $i = 0;
+        $i = 1;
         echo "<tr><th>Rank</th><th id='player'>Player</th><th id='completed'>Puzzle Completed</th></tr>";
         foreach ($list as $key => $value){
-            if($i==3){
+            if($i==10){
                 break;
             }
 
@@ -59,7 +59,7 @@
         }
         ?>
     </table>
-    <button class="mbtn"><a href="menu.html">Back</a></button>
+    <a href="menu.html"><button class="mbtn">Back</button></a>
 </div>
 
 
@@ -74,5 +74,7 @@
 
 <iframe src="../music/kyoto.mp3" allow="autoplay" id="audio"></iframe>
 <audio id="player" autoplay hidden><source src="0.mp3" type="audio/mp3"></audio>
+
+
 </body>
 </html>

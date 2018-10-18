@@ -107,7 +107,7 @@ if(isset($_POST["submit"])){
                 <input type="password" placeholder="Confirm Password" name="confirmpassword">
                 
                 <div class="clearfix">
-                    <button type="button" class="cancelbtn"><a href="login.php">Cancel</a></button>
+                    <a href="login.php"><button type="button" class="cancelbtn">Cancel</button></a>
                     <button type="submit" name="submit" class="signupbtn">Sign Up</button>
                 </div>
             </div>
